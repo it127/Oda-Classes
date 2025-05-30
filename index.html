@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oda Classes</title>
+  <style>
+    :root {
+      --primary-color: #004aad;
+      --gradient: linear-gradient(135deg, #004aad, #00c2ff);
+      --glass-bg: rgba(255, 255, 255, 0.15);
+      --glass-border: rgba(255, 255, 255, 0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #d9e4f5, #ffffff);
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 100vh;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      animation: slideIn 1s ease forwards;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-top: 10px;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards 1s;
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateY(-50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    main {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .glass-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      padding: 30px;
+      margin: 20px 0;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1s ease;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .feature-box {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .feature-box h3 {
+      color: #004aad;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #004aad;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    /* Responsive Text */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Oda Classes</h1>
+    <p>Innovative Online Learning for Students of Tomorrow</p>
+  </header>
+
+  <main>
+    <div class="glass-card">
+      <h2>About Oda Classes</h2>
+      <p>
+        Oda Classes is a cutting-edge online learning platform tailored for students from grades 6 to 12. Our goal is to deliver exceptional Math and Science education through live interactive classes led by expert teachers.
+      </p>
+      <p>
+        With personalized attention, smart tracking tools, and AI-powered insights, Oda Classes ensures every student understands deeply, learns quickly, and succeeds confidently.
+      </p>
+    </div>
+
+    <div class="glass-card">
+      <h2>Why Choose Us?</h2>
+      <div class="features">
+        <div class="feature-box">
+          <h3>🚀 Live Interactive Classes</h3>
+          <p>Learn from the best teachers in real-time with two-way interaction.</p>
+        </div>
+        <div class="feature-box">
+          <h3>📊 Progress Reports</h3>
+          <p>Get regular insights into your learning journey and areas of improvement.</p>
+        </div>
+        <div class="feature-box">
+          <h3>🤖 AI-Powered Learning</h3>
+          <p>Smart recommendations and personalized learning paths for every student.</p>
+        </div>
+        <div class="feature-box">
+          <h3>💡 Concept Mastery</h3>
+          <p>Crystal-clear explanation of core concepts for deeper understanding.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Oda Classes. Empowering the Learners of Tomorrow.
+  </footer>
+
+</body>
+</html>
